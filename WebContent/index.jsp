@@ -1,17 +1,10 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: fili_
-  Date: 23.11.20
-  Time: 11:19
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
 <!-- dichiarazione e instanziazione di un loginBean !-->
 <jsp:useBean id="loginBean" scope="request" class="jspexample.LoginBean"/>
 
 <!-- mappare gli attributi di un oggetto sui campi della form -->
 <jsp:setProperty name="loginBean" property="*"/>
-
 
 <html>
 <head>
@@ -47,10 +40,10 @@
                 <input type="submit" name="login" value="Login">
             </div>
             <%
-                if (request.getParameter("login") != null) { //
-                    if (loginBean.validate()) {
-                        session.setAttribute("userName", loginBean.getNome());
-                        session.setAttribute("userCognome", loginBean.getCognome());
+                if (request.getParameter("login") != null) {
+                    if (loginBean.validate()) { // TODO validate come operazione di un controller (static controller i.e. ui ctrl)
+                        session.setAttribute("userName", loginBean.getName());
+                        session.setAttribute("userSurname", loginBean.getSurname());
                         session.setAttribute("userRole", loginBean.getRole());
             %>
                         <jsp:forward page="home.jsp"/>

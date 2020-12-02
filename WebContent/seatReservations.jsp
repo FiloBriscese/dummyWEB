@@ -23,9 +23,7 @@
         %>
         <td width="100px"><a href="profile.jsp">Your Profile</a></td>
         <td width="100px">Notifications</td>
-        <td width="100px">
-            <input type="submit" id="logout" value="Log out" style="color: red">
-        </td>
+        <td width="100px"><a href="logout.jsp" style="color: red;">Log out</a></td>
     </tr>
 </table>
 <br>

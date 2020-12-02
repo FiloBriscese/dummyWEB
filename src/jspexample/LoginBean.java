@@ -1,19 +1,16 @@
 package jspexample;
 
-//import sun.rmi.runtime.Log;
 
 public class LoginBean {
 
     private String studentId;
     private String password;
 
-    private String nome;
-    private String cognome;
+    private String name;
+    private String surname;
 
     private String role;
 
-    public LoginBean() {
-    }
 
     public String getStudentId() {
         return studentId;
@@ -31,20 +28,20 @@ public class LoginBean {
         this.password = password;
     }
 
-    public String getNome() {
-        return nome;
+    public String getName() {
+        return name;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public String getCognome() {
-        return cognome;
+    public String getSurname() {
+        return surname;
     }
 
-    public void setCognome(String cognome) {
-        this.cognome = cognome;
+    public void setSurname(String surname) {
+        this.surname = surname;
     }
 
     public String getRole() {
